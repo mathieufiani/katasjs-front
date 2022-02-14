@@ -1,13 +1,52 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    @apply font-helvetica;
+  }
+
+  h1 {
+    @apply font-helvetica lg:text-2xl text-xl font-semibold lg:leading-6
+        leading-7 text-gray-800 mt-2;
+  }
+
+  h2 {
+    @apply font-helvetica lg:text-xl text-lg font-semibold lg:leading-6 leading-7
+        text-gray-800 mt-4 mb-2;
+  }
+
+  p {
+    @apply text-gray-600 text-base;
+  }
+
+  span {
+    @apply font-semibold text-gray-800;
+  }
+
+  input {
+    @apply bg-transparent border-none text-center outline-none placeholder:outline-none focus:outline-none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .card-button {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800
+        text-base flex items-center justify-center leading-none text-white
+        bg-gray-800 w-full py-4 hover:bg-gray-700;
+  }
+  .cart-span {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800
+        text-base flex items-center justify-center leading-none text-white
+        bg-gray-800 w-full py-4 hover:bg-gray-700;
+  }
 }
